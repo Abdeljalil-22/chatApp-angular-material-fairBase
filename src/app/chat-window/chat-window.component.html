@@ -1,0 +1,14 @@
+<mat-toolbar color="accent">Mark Appleyard</mat-toolbar>
+<div class="message-thread">
+  <mat-card *ngFor="let message of messages" class="message-card">
+    <mat-card-content>{{ message.text }}</mat-card-content>
+    <div class="timestamp">{{ message.time }}</div>
+  </mat-card>
+</div>
+<div class="message-input">
+  <mat-form-field appearance="outline">
+    <mat-label>Send a message</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <button mat-raised-button color="primary">Send</button>
+</div>

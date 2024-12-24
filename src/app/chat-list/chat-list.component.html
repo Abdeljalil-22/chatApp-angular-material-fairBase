@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">Louie Barletta</mat-toolbar>
+<mat-list>
+  <mat-list-item *ngFor="let chat of chatList" (click)="selectChat(chat)">
+    <mat-icon matListIcon>person</mat-icon>
+    <div mat-line>{{ chat.name }}</div>
+    <div mat-line>{{ chat.preview }} <span class="time">{{ chat.time }}</span></div>
+  </mat-list-item>
+</mat-list>
