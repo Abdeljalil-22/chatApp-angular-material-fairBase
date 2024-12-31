@@ -5,6 +5,7 @@ import { ChatWindowComponent } from "./chat-window/chat-window.component";
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [RouterOutlet, ChatListComponent, ChatWindowComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
