@@ -98,7 +98,7 @@
   </footer>
 </main> -->
 
-<div class="container">
+<!-- <div class="container">
   <div class="row">
       <div class="col-md-5">
           <div class="panel panel-primary" *ngIf="joinned; else joinroom">
@@ -181,4 +181,38 @@
           </ng-template>
       </div>
   </div>
+</div> -->
+
+<!-- <div class="btn-group pull-right">
+  <button type="button" class="btn btn-default btn-xs" (click)="logout()">
+    Logout
+  </button>
+</div> -->
+<div #scrollMe class="panel-body">
+  <ul class="chat">
+    
+    <li *ngFor="let c of chats">
+      <div class="left clearfix" *ngIf="c.nickname === msgData.nickname; else rightchat">
+        <span class="chat-img pull-left">
+          <img src="http://placehold.it/50/55C1E7/fff&text=ME" alt="User Avatar" class="img-circle" />
+        </span>
+        <div class="chat-body clearfix">
+          <div class="header">
+            <strong class="primary-font">{{ c.nickname }}</strong>
+            <small class="pull-right text-muted">
+              <span class="glyphicon glyphicon-time"></span>{{ c.updated_at }}
+            </small>
+          </div>
+          <p>{{ c.message }}</p>
+        </div>
+      </div>
+      <ng-template #rightchat>
+        <div class="right clearfix">
+          <span class="chat-img pull-right">
+            <img src="http://placehold.it/50/FA6F57/fff&text=U" alt="User Avatar" class="img-circle" />
+          </span>
+        </div>
+      </ng-template>
+    </li>
+  </ul>
 </div>
